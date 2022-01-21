@@ -7,6 +7,7 @@ public class MsgParameters {
     Map<String,String> parameters= new HashMap<>();
 
     public MsgParameters(String inputMsg) {
+        inputMsg= inputMsg.substring(0, inputMsg.length()-1);
         String[] splitMsg = inputMsg.split(";");
         for (String msg : splitMsg) {
             String[] split = msg.split(":");
